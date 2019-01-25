@@ -1,4 +1,3 @@
-
 import 'package:flow_flutter_firebase/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -25,16 +24,37 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: FloatingActionButton.extended(
-      onPressed: () => _handleSignIn(),
-      backgroundColor: Colors.white,
-      icon: Image.asset('assets/google_g_logo.png', height: 40.0),
-      label: const Text('Sign in with Google'),
-      // Always remember FAB is far sexier than normal button ;)
-    ));
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: _buildBackgroundImage(),
+        ),
+        padding: EdgeInsets.all(10.0),
+        child: Center(
+          child: SingleChildScrollView(
+            child: Container(
+              child: Center(
+                child: FloatingActionButton.extended(
+                  onPressed: () => _handleSignIn(),
+                  backgroundColor: Colors.black,
+                  icon: Image.asset('assets/google_g_logo.png', height: 40.0),
+                  label: const Text('Sign in with Google'),
+                  // Always remember FAB is far sexier than normal button ;)
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  DecorationImage _buildBackgroundImage() {
+    return DecorationImage(
+      fit: BoxFit.cover,
+      colorFilter:
+          ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
+      image: AssetImage('assets/flow-zone.jpg'),
+    );
   }
 }
-
-
-
