@@ -9,7 +9,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:intl/intl.dart';
 import '../models/user.dart';
-import '../auth_service.dart';
+import './auth_service.dart';
 
 @override
 initState() {

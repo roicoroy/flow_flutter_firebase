@@ -1,5 +1,3 @@
-import 'package:flow_flutter_firebase/auth_service.dart';
-import 'package:flow_flutter_firebase/login_page.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatelessWidget {

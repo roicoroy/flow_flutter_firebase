@@ -1,4 +1,4 @@
-import 'package:flow_flutter_firebase/auth_service.dart';
+import 'package:flow_flutter_firebase/utils/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flow_flutter_firebase/flow_app.dart';
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: FloatingActionButton.extended(
                   onPressed: () => _handleSignIn(),
                   backgroundColor: Colors.black,
-                  icon: Image.asset('assets/google_g_logo.png', height: 40.0),
+                  icon: Icon(Icons.arrow_forward),
                   label: const Text('Sign in with Google'),
                   // Always remember FAB is far sexier than normal button ;)
                 ),

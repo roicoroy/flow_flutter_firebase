@@ -1,10 +1,10 @@
-import 'package:flow_flutter_firebase/auth_service.dart';
+import 'package:flow_flutter_firebase/utils/auth_service.dart';
 import 'package:flutter/material.dart';
 
 import 'package:cached_network_image/cached_network_image.dart';
 
 import '../models/user.dart';
-import '../auth_service.dart';
+import '../utils/auth_service.dart';
 
 class About extends StatefulWidget {
   const About({Key key}) : super(key: key);

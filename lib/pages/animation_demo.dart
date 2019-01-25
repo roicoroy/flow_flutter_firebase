@@ -1,27 +1,11 @@
 import 'package:flutter/material.dart';
 
 
-
-
-
-class AnimationDemo extends StatelessWidget {
-  // This widget is the root of your application.
+class AnimationDemo extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Gestures and Animations',
-      theme: new ThemeData(
-              primarySwatch: Colors.blue,
-      ),
-      home: new MyHomePage(),
-    );
-  }
+  _AnimationDemo createState() => new _AnimationDemo();
 }
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-class _MyHomePageState extends State<MyHomePage> 
+class _AnimationDemo extends State<AnimationDemo> 
   with SingleTickerProviderStateMixin {
 
   Animation<double> animation;

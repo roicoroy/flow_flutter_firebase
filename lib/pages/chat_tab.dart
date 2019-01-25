@@ -12,7 +12,7 @@ import 'package:intl/intl.dart';
 
 import '../utils/rich_text_view.dart';
 import '../models/user.dart';
-import '../auth_service.dart';
+import '../utils/auth_service.dart';
 
 
 

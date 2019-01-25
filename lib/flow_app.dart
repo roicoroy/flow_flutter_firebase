@@ -1,4 +1,4 @@
-import 'package:flow_flutter_firebase/auth_service.dart';
+import './utils/auth_service.dart';
 import 'package:flow_flutter_firebase/login_page.dart';
 import 'package:flow_flutter_firebase/models/user.dart';
 import 'package:flutter/material.dart';
@@ -9,8 +9,6 @@ import './pages/home_tab.dart' as _firstTab;
 import './pages/chat_tab.dart' as _secondTab;
 import './pages/profile_tab.dart' as _thirdTab;
 import 'package:cached_network_image/cached_network_image.dart';
-
-
 
 class FlowApp extends StatefulWidget {
   @override
@@ -36,6 +34,7 @@ class TabsState extends State<FlowApp> {
     }
     super.initState();
   }
+
   User curUser;
   @override
   void dispose() {
@@ -95,6 +94,14 @@ class TabsState extends State<FlowApp> {
                       onTap: () {
                         Navigator.pop(context);
                         Navigator.of(context).pushNamed('/about');
+                      },
+                    ),
+                    new ListTile(
+                      leading: new Icon(Icons.info),
+                      title: new Text('Animation Demo'),
+                      onTap: () {
+                        Navigator.pop(context);
+                        Navigator.of(context).pushNamed('/animation');
                       },
                     ),
                     new Divider(),

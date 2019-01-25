@@ -1,4 +1,4 @@
-import 'package:flow_flutter_firebase/auth_service.dart';
+import 'package:flow_flutter_firebase/utils/auth_service.dart';
 import 'package:flow_flutter_firebase/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -50,7 +50,7 @@ class _Profile extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xffe9408d),
+      color: const Color(0xff2f2e2e),
       child: GestureDetector(
         child: Center(
           child: Hero(

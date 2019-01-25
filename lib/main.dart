@@ -1,5 +1,6 @@
 import 'dart:convert';
-import 'package:flow_flutter_firebase/auth_service.dart';
+import 'package:flow_flutter_firebase/pages/animation_demo.dart';
+import 'package:flow_flutter_firebase/utils/auth_service.dart';
 import 'package:flow_flutter_firebase/flow_app.dart';
 import 'package:flow_flutter_firebase/login_page.dart';
 import 'package:flow_flutter_firebase/pages/about.dart';
@@ -9,12 +10,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import './models/user.dart';
 
 void main() => runApp(LoginWidget());
-// +++++ TODO++++
-// Add routing for tab/side menu navigation
-
-// here define user,
-// load first login page then go to
-// home page is logged in.
 
 class LoginWidget extends StatefulWidget {
   _LoginWidget createState() => _LoginWidget();
@@ -48,6 +43,7 @@ class _LoginWidget extends State<LoginWidget> {
         // '/': (BuiRldContext context) => MyHomePage(),
         '/about': (BuildContext context) => About(),
         '/support': (BuildContext context) => Support(),
+        '/animation': (BuildContext context) => AnimationDemo(),
       },
       onUnknownRoute: (RouteSettings settings) {
         return MaterialPageRoute(
